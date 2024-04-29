@@ -8,7 +8,7 @@ import os
 wiki_wiki = wikipediaapi.Wikipedia('ArtistMap (ebrooks1@macalester.edu)', 'en', extract_format=wikipediaapi.ExtractFormat.WIKI) # put your email here
 # Specify the title of the Wikipedia page you want to access
 
-page = 'List of indie pop artists'
+page = 'List of music genres and styles'
 
 artist_list = wiki_wiki.page(page) # (name of the wiki page)
 artist_list_strings = list(artist_list.links.keys()) 
@@ -19,9 +19,9 @@ for title in titles:
   article_map[title] = None
 
 # Create a new CSV file in this folder, according the genre we are looking at.
-filepath = 'indie_pop_titles_text.csv'
+filepath = 'music_genres_titles_text.csv'
 data = [['Title', 'Text']]
-with open('indie_pop_titles_text.csv', mode='w', newline='') as file: #change path name according to genre
+with open('music_genres_titles_text.csv', mode='w', newline='') as file: #change path name according to genre
     writer = csv.writer(file)
     writer.writerows(data)
     

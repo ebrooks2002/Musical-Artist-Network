@@ -1,13 +1,13 @@
 import pandas as pd
 import networkx as nx
 import matplotlib.pyplot as plt
-df = pd.read_csv('indie_pop_graph_ready.csv')
+df = pd.read_csv('music_genre_graph_ready.csv')
 # # Create a graph
 G = nx.Graph()
 
 # # Add edges and edge attributes
 for _, row in df.iterrows():
-    G.add_edge(row['Artist 1'], row['Artist 2'], weight=row['Cosine Similarity'])
+    G.add_edge(row['Genre 1'], row['Genre 2'], weight=row['Cosine Similarity'])
 
 
 # Draw the network
