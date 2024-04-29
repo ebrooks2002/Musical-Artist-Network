@@ -1,5 +1,10 @@
 import lyricsgenius
+import pandas as pd
 token = 'wTWCvqt8fyKW0_VoFGqAinfL1SdZWNOYr1iA0sW2FcrCAaEAbZTJARumEuCB6bvf'
+
+
+genius = lyricsgenius.Genius(token)
+
 def get_lyrics(song_title, artist_name):
     genius = lyricsgenius.Genius(token)
     genius.remove_section_headers = True  # Remove section headers (e.g., [Chorus]) from lyrics when returned
@@ -10,8 +15,7 @@ def get_lyrics(song_title, artist_name):
         return song.lyrics
     return "Lyrics not found."
 
-genius = lyricsgenius.Genius(token)
-artist = genius.search_artist("Glokk40Spaz", sort="title")
-print(artist.songs)
-# Example usage
-lyrics = get_lyrics("So What", "Bladee")
+#artist = genius.search_artist("Glokk40Spaz", sort="title")
+
+
+
