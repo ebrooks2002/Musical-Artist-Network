@@ -15,6 +15,13 @@ def get_lyrics(song_title, artist_name):
         return song.lyrics
     return "Lyrics not found."
 
+df = pd.read_csv("rappers.csv")
+print(df.shape)
+df = df[df['Text'].str.len() >= 10000]
+df = df[df['Text'].str.find("Wikipedia:") == -1]
+df.to_csv("rappers_famous1.csv")
+print(df.head())
+print(df.shape)
 #artist = genius.search_artist("Glokk40Spaz", sort="title")
 
 

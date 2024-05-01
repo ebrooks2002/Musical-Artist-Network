@@ -10,7 +10,7 @@ import os
 
 # The only part of this you change is line 12 and line 88.
 
-filepath = 'music_genres_titles_text.csv' #MUST CHANGE !!!!!!
+filepath = 'rappers_famous1.csv' #MUST CHANGE !!!!!!
 
 # Put texts and titles into their own lists.
 texts = []
@@ -56,9 +56,9 @@ for x in range(len(cosine_sim_matrix)):
 
 # Creating our CSV file to be turned into a our graph representation.
 # Setting our threshold:
-threshold = 0.3
+threshold = 0.4
 # Initialize:
-headers = ["Genre 1", "Genre 2", "Cosine Similarity"]
+headers = ["Artist 1", "Artist 2", "Cosine Similarity"]
 # Preallocating space in the dataframe:
 num_rows = 18774071
 df = pd.DataFrame(index=np.arange(num_rows), columns=headers)
@@ -84,4 +84,5 @@ for key, value in csm_dict.items():
 
 cleaned_df = df.dropna(how='all')
 print(cleaned_df.columns)
-cleaned_df.to_csv("music_genre_graph_ready.csv", index=False) # MUST CHANGE !!!!!!!
+
+cleaned_df.to_csv("rappers_famous_graph_ready1.csv", index=False) # MUST CHANGE !!!!!!!
