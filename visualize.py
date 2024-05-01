@@ -1,10 +1,17 @@
+# Author: Ethan Brooks
+
+'''
+This script uses networkx, plotly, and a community detection library to visualize and "interactify" the graph data we have collected.
+'''
+
+# import neccessary libraries.
 import pandas as pd
 import networkx as nx
 import plotly.graph_objects as go
 import community as community_louvain
 
 # Load data from CSV
-df = pd.read_csv('rappers_famous_graph_ready1.csv')
+df = pd.read_csv('ambient_artists_graph_ready.csv')
 G = nx.Graph()
 
 # Add edges from the DataFrame
