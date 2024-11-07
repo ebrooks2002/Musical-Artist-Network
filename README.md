@@ -1,8 +1,22 @@
 
-
 # Musical Artist Network
 
-This project utilizes **TF-IDF** vectors to represent music artists and **cosine similarity** to compare artists within specific music genres. By analyzing artists' Wikipedia pages, we can create a network of musicians that highlights their similarities.
+The aim of this project is to explore the relationship between artists in a specific music genre.
+
+We use artists' wikipedia articles as our way of comparing them to each other. Articles contain information like background, style, and the names of other artists, which can give us hints into what their music is like. By comparing this information across artists, we can find which artists are more similar to each other, allowing users to find new artists they'd like.
+
+We utitlize **TF-IDF** vectors to represent music artists' wikipedia articles and **cosine similarity** to compare their  within specific music genres. TF-IDF, which stands for term frequency - inverse document frequency is a simple method to try to quantify the meaning of a text. It is a statistical measurment that measures the importants of a word in a document, based on its frequency in that document and its frequency in the corpus. For each word, a score is calculated, reflecting its importance in the document.
+
+Cosine similarity is a simple method to find how close two vectors are to each other. To find cosine similarity, we find the dot product of the two vectors and then divide the dot product by product of the two vectors' lengths.
+ Example code: 
+ ```
+def cosine_sim(X, Y):
+    dot_product = np.dot(X, Y)
+    norm_X = np.linalg.norm(X)
+    norm_Y = np.linalg.norm(Y)
+    cosine_similarity = dot_product / (norm_X * norm_Y)
+    return cosine_similarity
+```
 
 ---
 
@@ -41,7 +55,7 @@ Follow these steps to generate the artist network:
 
 ### Step 3: Run the Script
 
-Execute the `title_text.py` script. This will generate a CSV file containing the names of artists and their corresponding Wikipedia articles. The resulting CSV file will look like this:
+Execute the `title_text.py` script. This will generate a CSV file containing the names of artists and their corresponding Wikipedia articles. The resulting CSV file will look something like this:
 
 ---
 
@@ -68,7 +82,7 @@ Execute the `title_text.py` script. This will generate a CSV file containing the
 - Make sure you are reading the csv file of the graph you'd like to visualize:
   ```df = pd.read_csv('ambient_artists_graph_ready.csv')```
 - The result will look something like this:
-
+---
   ![rappergraph](https://github.com/user-attachments/assets/5f0bbb69-9caf-45e9-ad18-4f279bf98d0e)
 
 ---
