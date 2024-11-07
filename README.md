@@ -45,9 +45,9 @@ Execute the `title_text.py` script. This will generate a CSV file containing the
 
 ---
 
-<div align="center">
+
   <img width="550" height="400" alt="Screen Shot 2024-11-06 at 8 21 31 PM" src="https://github.com/user-attachments/assets/2992f975-4485-48aa-8533-bb86fdd2bc69">
-</div>
+
 
 ---
 
@@ -62,11 +62,15 @@ Execute the `title_text.py` script. This will generate a CSV file containing the
   
 - **Note**: Converting the CSV to a graph-ready format may take a while, especially if the genre has over 1000 artists. The time complexity of this step is **O(n²)** due to the pairwise comparison of TF-IDF vectors between artists.
 
----
 
 ### Step 5: Visualize the Graph
 - Open `visualize.py` script.
 - Make sure you are reading the csv file of the graph you'd like to visualize:
   ```df = pd.read_csv('ambient_artists_graph_ready.csv')```
-- The result will look something like this: 
+- The result will look something like this:
+
+  ![rappergraph](https://github.com/user-attachments/assets/5f0bbb69-9caf-45e9-ad18-4f279bf98d0e)
+
+---
+
 This workflow helps in constructing a meaningful network of artists within a genre, which can be visualized or analyzed further using graph algorithms. Enjoy exploring the musical artist network!
