@@ -5,7 +5,7 @@ The aim of this project is to explore the relationship between artists in a spec
 
 We use artists' wikipedia articles as our way of comparing them to each other. Articles contain information like background, style, and the names of other artists, which can give us hints into what their music is like. By comparing this information across artists, we can find which artists are more similar to each other, allowing users to find new artists they'd like.
 
-We utitlize **TF-IDF** vectors to represent music artists' wikipedia articles and **cosine similarity** to compare their  within specific music genres. TF-IDF, which stands for term frequency - inverse document frequency is a simple method to try to quantify the meaning of a text. It is a statistical measurment that measures the importants of a word in a document, based on its frequency in that document and its frequency in the corpus. For each word, a score is calculated, reflecting its importance in the document.
+We utitlize **TF-IDF** vectors to represent music artists' wikipedia articles and **cosine similarity** to compare artists within specific music genres. TF-IDF, which stands for term frequency - inverse document frequency is a simple method to try to quantify the meaning of a text. It is a statistical measurment that measures the importants of a word in a document, based on its frequency in that document and its frequency in the corpus. For each word, a score is calculated, reflecting its importance in the document.
 
 Cosine similarity is a simple method to find how close two vectors are to each other. To find cosine similarity, we find the dot product of the two vectors and then divide the dot product by product of the two vectors' lengths.
  Example code: 
