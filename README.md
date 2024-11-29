@@ -31,6 +31,7 @@ pip install python-louvain
 pip install numpy
 pip install scikit-learn
 pip install wikipedia-api
+pip install networkx
 ```
 
 ---
