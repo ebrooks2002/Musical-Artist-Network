@@ -7,7 +7,7 @@ We use artists' wikipedia articles as our way of comparing them to each other. A
 
 We utitlize **TF-IDF** vectors to represent music artists' wikipedia articles and **cosine similarity** to compare artists within specific music genres. TF-IDF, which stands for 'term frequency - inverse document frequency' is a simple method to try to quantify the meaning of a text. It is a statistical measurment that measures the importance of a word in a document, based on its frequency in that document and its frequency in the corpus. For each word, a score is calculated, reflecting its importance in the document.
 
-Cosine similarity is a simple method to find how close two vectors are to each other. To find cosine similarity, we find the dot product of the two vectors and then divide the dot product by product of the two vectors' lengths.
+Cosine similarity is a method to find how close two vectors are to each other. To find cosine similarity, we find the dot product of the two vectors and then divide the dot product by product of the two vectors' lengths.
  Example code: 
  ```
 def cosine_sim(X, Y):
